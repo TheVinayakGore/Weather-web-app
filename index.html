@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="weather.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weather App | Live Weather Condition</title>
+  </head>
+  <body>
+    <div
+      class="fixed top-0 inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"
+    ></div>
+
+    <div
+      class="flex flex-col items-center justify-center fixed space-y-10 font-light p-10 w-full h-screen"
+    >
+      <div
+        class="flex items-center justify-between rounded-xl space-x-10 w-full h-full"
+      >
+        <div
+          class="flex flex-col items-start justify-between m-auto p-10 bg-white space-y-24 rounded-xl shadow-2xl shadow-black/[0.3] w-1/2 h-full"
+        >
+          <div class="flex items-center space-x-3 whitespace-nowrap w-full">
+            <p class="text-lg">Search City</p>
+            <div class="search flex space-x-2">
+              <input
+                type="text"
+                class="p-2 px-3 border border-zinc-600 rounded-md placeholder:text-zinc-400 w-full"
+                placeholder="Delhi"
+                required
+              />
+              <button
+                class="flex items-center justify-center p-2 border border-purple-300 hover:border-white hover:bg-purple-200 text-white hover:text-purple-600 rounded-md bg-purple-500 text-lg font-bold w-14"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="flex-col items-center justify-center m-auto space-x-2 w-full"
+          >
+            <p class="city text-center text-4xl font-extrabold">City</p>
+            <div class="flex flex-col items-center space-y-5 my-10">
+              <div class="flex items-center text-5xl font-bold">
+                <img src="w1.png" alt="cloud" class="cloud w-40" />
+                <p class="temp ml-3">26</p>
+                <p>ºC</p>
+              </div>
+              <p class="condition text-3xl font-medium">Clouds</p>
+            </div>
+            <div class="flex items-center space-x-20 p-5">
+              <div class="flex flex-col items-center justify-center space-y-2">
+                <p class="text-xl text-zinc-500 font-normal">Humidity</p>
+                <div class="flex text-2xl space-x-1 font-normal">
+                  <p class="humidity">18</p>
+                  <p>%</p>
+                </div>
+              </div>
+              <div class="flex flex-col items-center justify-center space-y-2">
+                <p class="text-xl text-zinc-500 font-normal">Wind Speed</p>
+                <div class="flex text-2xl space-x-1 font-normal">
+                  <p class="wind">19.2</p>
+                  <p>km/h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col bg-gradient-to-r from-purple-400 to-purple-600 text-white rounded-xl shadow-2xl shadow-black/[0.3] w-full h-full"
+        >
+          <div class="flex flex-col">
+            <img src="weather.gif" alt="gif" class="rounded-t-xl h-[30rem]">
+
+            <div>
+              <ul class="flex items-center justify-center space-x-3 p-5 w-full">
+                <li class="w-full">
+                  <button
+                    type="submit"
+                    class="flex flex-col items-center space-y-2 bg-purple-400 hover:bg-yellow-300 hover:text-black p-5 rounded-lg w-full"
+                  >
+                    <p class="text-xl font-normal">Delhi</p>
+                    <img src="c1.png" alt="cloud" class="condition-delhi w-10" />
+                    <p>Temperature</p>
+                    <div class="flex items-center text-xl">
+                      <p class="delhi ml-3"></p>
+                      <p>ºC</p>
+                    </div>
+                  </button>
+                </li>
+                <li class="w-full">
+                  <button
+                    type="submit"
+                    class="flex flex-col items-center space-y-2 bg-purple-400 hover:bg-yellow-300 hover:text-black p-5 rounded-lg w-full"
+                  >
+                    <p class="text-xl font-normal">Mumbai</p>
+                    <img src="c1.png" alt="cloud" class="condition-mumbai w-10" />
+                    <p>Temperature</p>
+                    <div class="flex items-center text-xl">
+                      <p class="mumbai ml-3"></p>
+                      <p>ºC</p>
+                    </div>
+                  </button>
+                </li>
+                <li class="w-full">
+                  <button
+                    type="submit"
+                    class="flex flex-col items-center space-y-2 bg-purple-400 hover:bg-yellow-300 hover:text-black p-5 rounded-lg w-full"
+                  >
+                    <p class="text-xl font-normal">Bangalore</p>
+                    <img src="c1.png" alt="cloud" class="condition-bangalore w-10" />
+                    <p>Temperature</p>
+                    <div class="flex items-center text-xl">
+                      <p class="bangalore ml-3"></p>
+                      <p>ºC</p>
+                    </div>
+                  </button>
+                </li>
+                <li class="w-full">
+                  <button
+                    type="submit"
+                    class="flex flex-col items-center space-y-2 bg-purple-400 hover:bg-yellow-300 hover:text-black p-5 rounded-lg w-full"
+                  >
+                    <p class="text-xl font-normal">Kolkata</p>
+                    <img src="c1.png" alt="cloud" class="condition-kolkata w-10" />
+                    <p>Temperature</p>
+                    <div class="flex items-center text-xl">
+                      <p class="kolkata ml-3"></p>
+                      <p>ºC</p>
+                    </div>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/8a6fea7a51.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
